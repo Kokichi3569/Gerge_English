@@ -1,0 +1,33 @@
+<table class="table">
+      <thead>
+        <tr>
+            <th>会員ID</th>
+            <th>氏名</th>
+            <th>メールアドレス</th>
+            <th>ステータス</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% users.each do |user| %>
+         <tr>
+             <td class="info col-xs-1">
+                <%= user.id %>
+             </td>
+             <td class="text-left">
+                <%= link_to full_name(user),admin_user_path(user) %>
+             </td>
+             <td class="text-left">
+                <%= user.email %>
+             </td>
+             <td class="col-xs-2">
+                <% if user.is_deleted == true%>
+                  <p class="text-secondary">退会済</p>
+                <% else %>
+                  <p class="text-success">有効</p>
+                <% end %>
+             </td>
+         </tr>
+        <% end %>
+      </tbody>
+    </table>

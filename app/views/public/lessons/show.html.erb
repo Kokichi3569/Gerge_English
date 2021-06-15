@@ -1,0 +1,9 @@
+<%= attachment_image_tag @lesson, :image, size: "340x220", fallback: "no_image.jpg" %>
+<h3><%= @lesson.name %></h3>
+<p><%= @lesson.introduction %></p>
+<% if @lesson.is_active == true %>
+  <h4>¥<%= (@lesson.price).to_i.to_s(:delimited, delimiter: ',') %></h4>
+  <p>(税込)</p>
+<% else %>
+  <h4>売り切れ</h4>
+<% end %>
