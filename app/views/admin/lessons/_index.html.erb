@@ -1,0 +1,29 @@
+
+     <table class="table  mb-5">
+        <thread>
+            <tr>
+             <th>授業ID</th>
+             <th>授業名</th>
+             <th>税込価格</th>
+             <th>ジャンル</th>
+             <th>ステータス</th>
+            </tr>
+         </thread>
+        <tbody>
+         <% lessons.each do |item| %>
+         <tr>
+          <td><%= lesson.id %></td>
+          <td><%= link_to lesson.name,admin_lesson_path(lesson.id) %></td>
+          <td><%= lesson.price %></td>
+          <td><%= lesson.genre.name %></td>
+          <td>
+            <% if lesson.is_active == true %>
+              <p class="text-success ">受付中</p>
+             <% else %>
+              <p class="text-secondary ">受付停止中</p>
+            <% end %>
+          </td>
+         </tr>
+        <% end %>
+        </tbody>
+    </table>

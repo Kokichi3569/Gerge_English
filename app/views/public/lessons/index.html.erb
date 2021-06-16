@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 px-sm-0">
+      <!--<h1>授業一覧</h1><h4><全件></h4>-->
+    </div>
+  </div>
+  <div class="row mt-3 mb-3 text-center text-xs-center text-sm-center text-md-left">
+
+      <div class="col-xs-10 col-sm-10 col-md-6 col-lg-3">
+       <div class="card w-100 bg-transparent border-0" style="width: 18rem;">
+        <%= link_to public_lessons_index_path(lesson.id) do %>
+          <p class="img-wrap"><%= attachment_image_tag lesson, :image, size: "180x130", fallback: "no_image.jpg" %></p>
+        <% end %>
+        <div class="card-body">
+          <p class="lesson-details lesson-name card-text"><%= lesson.name %></p>
+          <% if lesson.is_active == true %>
+            <p class="lesson-details card-text">¥<%= (lesson.price).to_i.to_s(:delimited, delimiter: ',') %></p>
+          <% else %>
+            <p class="text-danger font-weight-bold card-text">売り切れ</p>
+        <% end %>
+        </div>
+      </div>
+    </div>
+      <% end %>
+  </div>
+      <%= paginate(@lesson) %>
+</div>
