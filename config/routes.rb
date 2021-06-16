@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     resources :genres, only: [:index, :edit, :create]
   end
   namespace :admin do
-    resouces :lessons,except: [:delete]
+    resources :lessons,except: [:delete]
 
   end
   namespace :admin do
@@ -46,10 +46,12 @@ Rails.application.routes.draw do
     get 'blogs/index'
   end
   namespace :public do
-    resouces :orders,only: [:new, :index, :show, :create] do
+    resources :orders,only: [:new, :index, :show, :create] do
       collection do
         post 'orders/confirm'
         get 'orders/thanx'
+      end
+    end
   end
   namespace :public do
     resources :lesson, only: [:index, :show]
@@ -59,6 +61,5 @@ Rails.application.routes.draw do
     resources :users,only: [:show, :edit, :update]
   end
 
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
