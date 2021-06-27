@@ -5,10 +5,10 @@
                 <%=image_tag "George_picture.jpg",class:"d-block mx-auto w-50",alt:"First slide"%>
             </div>
             <div class="carousel-item">
-                <img class="d-block mx-auto w-50 " src="assets/sumple1.jpg" alt="Second slide">
+                <%=image_tag "sumple1.jpg",class:"d-block mx-auto w-50",alt:"Second slide"%>
             </div>
             <div class="carousel-item">
-                <img class="d-block mx-auto w-50" src="assets/publiclesson.png" alt="Third slide">
+                <%=image_tag "publiclesson.png",class:"d-block mx-auto w-50",alt:"Third slide"%>
             </div>
 
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -25,7 +25,7 @@
     <div class="container">
         <div class="row my-5 card-deck">
             <div class="card col-xl-4">
-                <img class="card-img-top w-100 h-50" src="assets/blog1.png">
+                <%=image_tag "blog1.png",class:"card-img-top w-100 h-50"%>
                 <div class="card-body">
                     <h5 class="card-title">新着ブログ</h5>
                     <%= link_to "<<詳細", public_blogs_path,class: 'btn btn-outline-secondary mx-3 my-1'%>
@@ -41,7 +41,7 @@
             </div>
 
             <div class="card col-xl-4">
-                <img class="card-img-top w-100 h-50" src="assets/private lesson.jpeg">
+                <%=image_tag "private lesson.jpeg",class:"card-img-top w-100 h-50"%>
                 <div class="card-body">
                     <h5 class="card-title">個別レッスン</h5>
                     <%= link_to "<<詳細", public_lessons_path,class: 'btn btn-outline-secondary mx-3 my-1'%>
