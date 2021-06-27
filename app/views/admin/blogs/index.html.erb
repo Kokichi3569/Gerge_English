@@ -3,6 +3,7 @@
   <thread>
     <tr>
       <th>タイトル</th>
+      <th>カテゴリ</th>
       <th>更新日時</th>
     </tr>
   </thread>
@@ -15,12 +16,18 @@
       <%= link_to blog.title, admin_blog_path(blog.id) %>
     </td>
     <td class="text-left">
+      <%= blog.category %>
+    </td>
+    <td class="text-left">
       <%= blog.created_at%>
     </td>
   </tr>
+
   <% end %>
   </tbody>
+
 </table>
+ <%= link_to "新規作成", new_admin_blog_path, class:"btn btn btn-outline-secondary" %>
 
 
 
