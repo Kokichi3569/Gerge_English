@@ -17,6 +17,7 @@
 
   body,
   #wrapper {
+    background-image: image-url("hoge.jpg");
     display: flex;
     flex-direction: column;
     min-height: 100vh;
