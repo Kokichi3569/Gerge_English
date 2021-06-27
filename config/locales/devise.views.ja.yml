@@ -1,5 +1,14 @@
 ja:
   activerecord:
+    errors:
+      models:
+        lesson:
+          attributes:
+            lesson_name:
+              blank: "が空白です。"
+            
+      messages:
+        record_invalid: "バリデーションに失敗しました: %{errors}"
     attributes:
       user:
         current_password: "現在のパスワード"

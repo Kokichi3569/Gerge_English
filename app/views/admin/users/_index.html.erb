@@ -15,7 +15,7 @@
                 <%= user.id %>
              </td>
              <td class="text-left">
-                <%= link_to full_name(user),admin_user_path(user) %>
+                <%= link_to user.first_name,admin_user_path(user) %>
              </td>
              <td class="text-left">
                 <%= user.email %>

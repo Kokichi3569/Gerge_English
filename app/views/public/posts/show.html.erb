@@ -1,0 +1,8 @@
+<h1>投稿詳細</h1>
+
+<%= @post.title %>
+<%= @post.body %>
+<%= @post.image %>
+
+<%= link_to "編集する", new_public_post_path(@post.id), class: 'btn btn-success' %>
+<%= link_to "投稿一覧へ戻る", pubulic_posts_path, class: 'btn btn-outline-secondary'%>

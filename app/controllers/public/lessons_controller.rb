@@ -1,6 +1,6 @@
 class Public::LessonsController < ApplicationController
   def index
-    @total_lessonv = Lesson.all
+    @total_lesson = Lesson.all
     @lessons = Lesson.all.page(params[:page]).per(8)
   end
 
@@ -10,7 +10,7 @@ class Public::LessonsController < ApplicationController
 
   private
   def lessons_params
-    params.require(:lesson).permit(:genle_id, :name, :introduction, :price, :is_active, :image_id)
+    params.require(:lesson).permit(:genre_id, :name, :introduction, :price, :is_active, :image_id)
   end
 
 end
