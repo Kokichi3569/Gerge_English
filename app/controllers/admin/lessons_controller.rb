@@ -1,15 +1,15 @@
-class Admin::ItemsController < ApplicationController
+class Admin::LessonsController < ApplicationController
    before_action :authenticate_admin!
   def index
-    @lesson = Lesson.page(params[:page]).per(10)
+    @lessons = Lesson.page(params[:page]).per(10)
   end
 
   def show
-     @lesson = lesson.find(params[:id])
+     @lesson = Lesson.find(params[:id])
   end
 
   def edit
-    @lesson = lesson.find(params[:id])
+    @lesson = Lesson.find(params[:id])
   end
 
   def update
@@ -30,10 +30,10 @@ class Admin::ItemsController < ApplicationController
   def create
     @lesson = Lesson.new(lesson_params)
     if @lesson.save
-      flash[:notice] = "商品の新規登録が完了しました。"
-      redirect_to admin_lesson_path(@lesson)
+      flash[:notice] = "授業の新規登録が完了しました。"
+      redirect_to admin_lessons_path
     else
-      flash[:alert] = "商品の新規登録内容に不備があります。"
+      flash[:alert] = "授業の新規登録内容に不備があります。"
       render :new
     end
 
@@ -41,6 +41,6 @@ class Admin::ItemsController < ApplicationController
 
   private
   def lesson_params
-    params.require(:lesson).permit(:image, :name, :introduction, :genre_id, :price,:is_active)
+    params.require(:lesson).permit(:image, :lesson_name, :introduction, :price,:is_active)
   end
 end

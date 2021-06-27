@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2021_06_13_045356) do
     t.string "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
+  __END__
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

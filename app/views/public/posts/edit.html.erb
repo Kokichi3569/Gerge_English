@@ -1,2 +1,16 @@
-<h1>Public::Posts#edit</h1>
-<p>Find me in app/views/public/posts/edit.html.erb</p>
+<h1>編集</h1>
+<%= link_to '投稿一覧', public_posts_path, class: 'btn btn-outline-info' %>
+
+<%= form_with model: @post, url: public_posts, local: true do |f| %>
+
+  <%= f.label :タイトル %>
+  <%= f.text_field :title %>
+
+  <%= f.label :内容 %>
+  <%= f.text_area :body %>
+
+  <%= f.label :画像 %>
+  <%= f.attachment_field :image %>
+
+  <%= f.submit "編集する" %>
+<% end %>
