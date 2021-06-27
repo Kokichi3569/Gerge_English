@@ -1,24 +1,29 @@
-# README
+GeorgeのEnglishサロン
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+サイト概要
+英会話講師Georgeのホームページ。ブログ機能、授業予約機能、掲示板機能を付与したホームページ。 知り合いのGeorgeが自分の英会話のサイトが欲しいとのことで、ポートフォリオ作品の一つとしてrailsで作ってみようという流れで制作に至った。 Georgeの現状の問題として、既存の生徒30人との授業予約がlineアプリでのやりとりであるため、予約情報の把握が非効率であり、ダブルブッキングなどのケアレスミスが月に一度程度生じている。 また、これからオンラインサロンによる集団授業に力を入れる予定であるため、詳細の告知をブログという形で発信したいとの要望に答える形で、今回の機能実装に至った。
 
-Things you may want to cover:
+サイトテーマ
+英会話講師Georgeと生徒、及び生徒同士のコミュニケーションサイト
 
-* Ruby version
+テーマを選んだ理由
+ホームページ作成は身近な人に対してプログラミングで役立てる初歩的なことであるため。 全国を旅した際、良質なコンテンツ（無人島、無農薬農業、英会話）を持っているものの発信できない人が多数いることに気づいた。 特に過疎地域に多いのだが、そのようなネットに疎い人に対してプログラミングで役立てることとしてホームページ作りが最初に思い浮かんだ。 過疎地域の人口1000万人に焦点を当てると、少なく見積もって100人に1人、計10万人の人が自身のコンテンツをうまく発信できていないという計算になる。 そのような潜在的需要を満たすためにも今回、wordpress以上に高機能なrailsでのホームページ作りは汎用性が見込めるスキルとして価値があると判断して取り組むことにした。
 
-* System dependencies
+ターゲットユーザ
+既存の生徒30人(main)、大人になって英会話を始めようとしている20代以上男女。
 
-* Configuration
+主な利用シーン
+授業予約、George先生の日常をブログで共有。過去の授業風景、オンラインサロンの詳細を認知。
 
-* Database creation
+設計書
+現在作成中2021.6.3
 
-* Database initialization
+チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/1_JVG-eCuvu6C7s9ahpUpfSa1Q7E3z1KF2GrxQJSyRsI/edit?usp=sharing
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+開発環境
+* OS：Linux(CentOS)
+* 言語：HTML,CSS,JavaScript,Ruby,SQL
+* フレームワーク：Ruby on Rails
+* JSライブラリ：jQuery
+* IDE：Cloud9
