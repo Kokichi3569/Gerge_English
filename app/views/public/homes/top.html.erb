@@ -2,7 +2,7 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block mx-auto w-50" src="assets/George_picture.jpg" alt="First slide">
+                <%=image_tag "George_picture.jpg",class:"d-block mx-auto w-50",alt:"First slide"%>
             </div>
             <div class="carousel-item">
                 <img class="d-block mx-auto w-50 " src="assets/sumple1.jpg" alt="Second slide">
@@ -33,7 +33,7 @@
             </div>
 
             <div class="card col-xl-4">
-                <img class="card-img-top w-100 h-50" src="assets/publiclesson.png" >
+                <%=image_tag "publiclesson.png",class:"card-img-top w-100 h-50"%>
                 <div class="card-body">
                     <h5 class="card-title">オンラインサロン</h5>
                     <%= link_to "<<詳細", public_lessons_path,class: 'btn btn-outline-secondary mx-3 my-1'%>
