@@ -5,7 +5,12 @@ class Public::PostsController < ApplicationController
 
   def create
     post = Post.new(post_params)
+    post.user_id = current_user.id
     post.save
+    tags = Vision.get_image_data(post.image)
+    tags.each do |tag|
+      post.tags.create(name: tag)
+    end
     redirect_to public_posts_path
   end
 
@@ -20,7 +25,7 @@ class Public::PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     post.delete
-    redirect_to public_posts_index_path
+    redirect_to public_posts_path
   end
 
   def edit
@@ -30,7 +35,7 @@ class Public::PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
-    redirect_to public_posts_index_path
+    redirect_to public_posts_path
   end
 
   private
