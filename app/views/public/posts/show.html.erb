@@ -12,7 +12,7 @@
       <tr>
           <td><%= @post.title %></td>
           <td><%= @post.body %></td>
-          <td><%= attachment_image_tag(@post, :image, width:"150px", height:"150px",fallback: "no_image.jpg") %>
+          <td><%= attachment_image_tag(@post, :image, width:"150px", height:"150px",fallback: "no_image.jpg", format: 'jpeg') %>
           <% @post.tags.each do |tag| %>
           <div class="tag-box">
           <span class="label"><%= tag.name %></span></div>
